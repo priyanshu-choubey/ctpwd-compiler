@@ -73,11 +73,11 @@ def compile_image():
             # Convert directions to list of [dx, dy] pairs
             coordinates = [direction_map[direction] for direction in directions]
             
-            # Return in the standard response format
+            # Return in the standard response format with output as string
             return jsonify({
                 "success": True,
                 "is_correct": True,
-                "output": coordinates
+                "output": str(coordinates)
             })
         else:
             # Fallback to original behavior for non-direction blocks
